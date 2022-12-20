@@ -15,7 +15,7 @@ from imblearn.under_sampling import RandomUnderSampler
 from sklearn.metrics import f1_score, accuracy_score
 import numpy as np
 np.random.seed(111)
-stopwords = nltk.corpus.stopwords.words('english')
+#stopwords = nltk.corpus.stopwords.words('english')
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -33,13 +33,13 @@ class TextProcessing:
         text = self.sent.apply(lambda x: ' '.join(
             [word for word in x.split() if word not in string.punctuation]))
         return text
-
+    '''
     # process data by lowering, removing stopwords & punctuation
     def _process_text(self):
         sentences = self.sent.apply(lambda x: ' '.join([word for word \
             in x.split() if word not in set(stopwords) and string.punctuation]))
         return sentences
-
+    '''
     def tfidf_vectorizer(self, text):  #tf-idf vectorizer
         vectorizer = TfidfVectorizer()
         tf_idf = vectorizer.fit_transform(text).toarray()
