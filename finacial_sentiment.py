@@ -1,5 +1,5 @@
 import pandas as pd
-#import nltk
+import nltk
 #import string
 #import csv
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
