@@ -1,7 +1,7 @@
 import pandas as pd
-import nltk
-import string
-import csv
+#import nltk
+#import string
+#import csv
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 #conda install -c glemaitre imbalanced-learn
 from collections import Counter
