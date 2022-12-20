@@ -3,4 +3,4 @@ sklearn~=0.0
 matplotlib~=3.3.4
 imblearn~=0.0
 pytest~=6.2.5
-
+nltk~=3.7
