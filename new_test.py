@@ -6,7 +6,7 @@ text_proc = TextProcessing('data.csv')
 
 def test_my_model():
     over_samp = text_proc.oversample_random(
-        text_proc.bag_of_words(text_proc.no_punc_sent))
+        text_proc.bag_of_words(text_proc.sent))
     train_x, val_x, train_y, val_y = train_test_split(over_samp[0],
                                                       over_samp[1],
                                                       test_size=0.3)
