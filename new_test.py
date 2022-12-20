@@ -6,7 +6,7 @@ text_proc = TextProcessing('data.csv')
 
 def test_my_model():
     over_samp = text_proc.oversample_random(
-        text_proc.bag_of_words(text_proc.no_punc_sent))
+        text_proc.bag_of_words(text_proc.sent))
     train_x, val_x, train_y, val_y = train_test_split(over_samp[0],
                                                       over_samp[1],
                                                       test_size=0.3)
@@ -14,7 +14,7 @@ def test_my_model():
     model = MODELS['SVM']
     model.fit(train_x, train_y)
     pred = model.predict(val_x)
-    assert f1_score(val_y, pred, average='weighted') > 0.85
+    assert f1_score(val_y, pred, average='weighted') > 0.84
 
 def test_sentiment():
     train_x, val_x, train_y, val_y = train_test_split(text_proc.sent,
