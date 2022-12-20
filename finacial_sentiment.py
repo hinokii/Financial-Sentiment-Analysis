@@ -99,30 +99,19 @@ def best_model(models, text, labels, measure):
         else:
             print('Please select f1, f1_weighted or accuracy as metric.')
 
-
+'''
 text_proc = TextProcessing('data.csv')
 
-sampling_strategy = {-1: 2800, 0: 3130, 1: 2800}
+over_samp = text_proc.oversample_random(
+    text_proc.bag_of_words(text_proc.no_punc_sent))
 
-tfidf = text_proc.oversample_random(text_proc.tfidf_vectorizer(text_proc.sent))
-train_x, val_x, train_y, val_y = train_test_split(tfidf[0], tfidf[1], test_size=0.3)
 
-bow = text_proc.oversample_random(text_proc.bag_of_words(text_proc.no_punc_sent))
-train_xx, val_xx, train_yy, val_yy = train_test_split(bow[0], bow[1], test_size=0.3)
 
-model = MODELS['SVM']
+for testphrase in sent:
+    resultx = model_lgr.predict([testphrase])
+    print(resultx)
 
-model.fit(train_x, train_y)
-tfidf_pred = model.predict(val_x)
-print("TFIDF As Is - Random")
-print(f1_score(val_y, tfidf_pred, average='weighted'))
 
-model.fit(train_xx, train_yy)
-bow_pred = model.predict(val_xx)
-print("BoW No Punctuation - Random")
-print(f1_score(val_yy, bow_pred, average='weighted'))
-
-'''
 print("BOW Cleaned - Random")
 over_samp = text_proc.oversample_random(text_proc.bag_of_words(text_proc.cleaned_sent))
 best_model(MODELS, over_samp[0], over_samp[1], 'f1')
