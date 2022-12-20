@@ -15,7 +15,7 @@ from imblearn.under_sampling import RandomUnderSampler
 from sklearn.metrics import f1_score, accuracy_score
 import numpy as np
 np.random.seed(111)
-#stopwords = nltk.corpus.stopwords.words('english')
+stopwords = nltk.corpus.stopwords.words('english')
 import warnings
 warnings.filterwarnings("ignore")
 
