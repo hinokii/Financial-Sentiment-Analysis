@@ -25,7 +25,7 @@ class TextProcessing:
         self.df = pd.read_csv(file)
         self.sent = self.df['Sentence'].astype(str).str.lower()  # text not cleaned
         self.no_punc_sent = self._remove_punc()
-        self.cleaned_sent = self._process_text()  # Text cleaned
+        #self.cleaned_sent = self._process_text()  # Text cleaned
         self.labels = self._process_labels()
 
     # remove punctuation only
