@@ -1,4 +1,6 @@
 from stock import *
+from sklearn.metrics import f1_score
+
 
 text_proc = TextProc('stockerbot-export.csv')
 
@@ -18,6 +20,10 @@ history = model.fit(train_x, train_y, epochs=num_epochs, validation_data=(val_x,
 
 graph_plots(history, "accuracy")
 graph_plots(history, "loss")
+
+def test_model():
+    pred = model.predict(val_x)
+    assert f1_score(val_y, pred) > 0.95
 
 def test_stock():
     sent = ["they had another fantastic year. \
