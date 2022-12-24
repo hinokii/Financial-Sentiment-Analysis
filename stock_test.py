@@ -22,11 +22,11 @@ graph_plots(history, "accuracy")
 graph_plots(history, "loss")
 
 def test_model():
-    pred = model.predict(val_x)
-    assert f1_score(val_y, pred) > 0.95
+    loss, val_acc = model.evaluate(val_x, val_y)
+    assert val_acc > 0.93
 
 def test_stock():
-    sent = ["they had another fantastic year. \
-            Their profits are so high. I am very excited."]
+    sent = ["今年は景気が悪く利益がほとんどなかったためボーナスなんてなかった."]
+    print(model.predict(sent))
     pred = np.round(model.predict(sent))
     assert pred == 0
