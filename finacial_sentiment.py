@@ -99,35 +99,7 @@ def best_model(models, text, labels, measure):
         else:
             print('Please select f1, f1_weighted or accuracy as metric.')
 
-'''
-text_proc = TextProcessing('data.csv')
 
-over_samp = text_proc.oversample_random(
-    text_proc.bag_of_words(text_proc.no_punc_sent))
-
-
-
-for testphrase in sent:
-    resultx = model_lgr.predict([testphrase])
-    print(resultx)
-
-
-print("BOW Cleaned - Random")
-over_samp = text_proc.oversample_random(text_proc.bag_of_words(text_proc.cleaned_sent))
-best_model(MODELS, over_samp[0], over_samp[1], 'f1')
-
-print("TFIDF Cleaned - Random")
-comb = text_proc.oversample_random(text_proc.tfidf_vectorizer(text_proc.cleaned_sent))
-best_model(MODELS, comb[0], comb[1], 'f1')
-
-print("TFIDF Cleaned - SMOTE")
-comb = text_proc.oversample_smote(text_proc.tfidf_vectorizer(text_proc.cleaned_sent))
-best_model(MODELS, comb[0], comb[1], 'f1')
-
-print("TFIDF Cleaned - Combination")
-comb = text_proc.under_over_sample(text_proc.tfidf_vectorizer(text_proc.cleaned_sent), sampling_strategy)
-best_model(MODELS, comb[0], comb[1], 'f1')
-'''
 
 
 
