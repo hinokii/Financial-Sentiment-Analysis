@@ -58,7 +58,7 @@ combination of the model and the techniques, data without removing punctuation w
 The best combination for my data was Support Vector Machine with TF-IDF and RandomOverSampler. As shown on the classification report below, the weighted F1
 score achieved was 0.85, which is a significant improvement by random over-sampling as the original F1 score with TF-IDF without over-sampling was 0.64.
 
-![Classification Report](/home/hinoki/Financial-Sentiment-Analysis/report.png "Classification Report")
+![Classification Report](report.png "Classification Report")
 
 ![Confusion Matrix](/home/hinoki/Financial-Sentiment-Analysis/cm.png "Confusion Matrix")
 
