@@ -3,7 +3,15 @@
 ## Introduction
 Sentiment Analysis is to identify and classify opinions and emotions expressed in texts using natural language processing and text analysis. Financial Sentiment Analysis is the analysis of financial news and information typically affecting the stock markets, and based on changes in sentiment, investors make investment decisions.
 
-This study aims to perform sentiment analysis on the financial textual data available at Kaggle (https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis). The dataset consists of financial sentences and sentiment labels including “neutral”, “positive” and “negative”.  There are approximately 5,800 rows, but the data is significantly imbalanced as the number of data for each class is very different as summarized below. ![Data imbalance](pic/index.png "Imbalanced Data")
+This study aims to perform sentiment analysis on the financial textual data available at Kaggle (https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis). The dataset consists of financial sentences and sentiment labels including “neutral”, “positive” and “negative”.  There are approximately 5,800 rows, but the data is significantly imbalanced as the number of data for each class is very different as summarized below. 
+
+
+<img
+  src="pic/index.jpg"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
+
 
  The motivation of this project is to explorer how to represent the text information, which machine learning algorithm works well, and how to handle the imbalance in data.  To deal with the imbalanced classifications, I used various over-sampling techniques along with the cost-sensitive learning.
 
