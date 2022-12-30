@@ -7,9 +7,9 @@ This study aims to perform sentiment analysis on the financial textual data avai
 
 <img
   src="pic/index.png"
-  alt="Alt text"
-  title="Optional title"
-  style="display: inline-block; margin: 0 auto; max-width: 200px">
+  alt="Data imbalance"
+  title="Imbalanced Data"
+  style="display: inline-block; margin: 0 auto; max-width: 100px">
 
  The motivation of this project is to explorer how to represent the text information, which machine learning algorithm works well, and how to handle the imbalance in data.  To deal with the imbalanced classifications, I used various over-sampling techniques along with the cost-sensitive learning.
 
@@ -53,7 +53,6 @@ The performance was evaluated based on the weighted F1 scores on the validation 
 
 Support Vector Machine worked the best followed by Logistic Regression and Random Forest.  For all three models, RandomOverSampler resulted in higher F1 scores than SMOTE or combination of SMOTE and RandomUnderSampler to deal with my imbalance data.  TF-IDF generally worked better than Bag of Words as Bag of Words worked well only when randomly over-sampled.  
 
-
 <img
   src="pic/result.png"
   alt="Results"
@@ -64,16 +63,33 @@ I have compared the performance with and without punctuation, but overall, remov
 punctuation did not make much difference on the classification accuracy. But for my best
 combination of the model and the techniques, data without removing punctuation worked slightly better. This is consistent with the result obtained by Sun (2018) as he concluded in his analysis that the preprocessing methods such as removing punctuation and lemmatizing do not have apparent influence on the classification accuracy. Rather, his result indicated that the raw texts work a little bit better than processed dataset, which is likely becacuse punctuation can keep certain sentiment.
 
-![Results2](pic/compare.png "Results2")
+<img
+  src="pic/compare.png"
+  alt="Results2"
+  title="Results2"
+  style="display: inline-block; margin: 0 auto; max-width: 200px">
 
-![Champion](pic/champ.png "Champion")
+<img
+  src="pic/champ.png"
+  alt="Champions"
+  title="Champions"
+  style="display: inline-block; margin: 0 auto; max-width: 100px">
 
 The best combination for my data was Support Vector Machine with TF-IDF and RandomOverSampler. As shown on the classification report below, the weighted F1
 score achieved was 0.85, which is a significant improvement by random over-sampling as the original F1 score with TF-IDF without over-sampling was 0.64.
 
-![Classification Report](pic/report.png "Classification Report")
+<img
+  src="pic/report.png"
+  alt="Classification Report"
+  title="Classification Report"
+  style="display: inline-block; margin: 0 auto; max-width: 200px">
 
-![Confusion Matrix](pic/cm.png "Confusion Matrix")
+<img
+  src="pic/cm.png"
+  alt="Confusion Matrix"
+  title="Confusion Matrix"
+  style="display: inline-block; margin: 0 auto; max-width: 200px">
+
 
 ## References:
 
