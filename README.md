@@ -67,13 +67,13 @@ combination of the model and the techniques, data without removing punctuation w
   src="pic/compare.png"
   alt="Results2"
   title="Results2"
-  style="display: inline-block; margin: 0 auto; max-width: 100px">
+  style="display: inline-block; margin: 0 auto; width: 100px">
 
 <img
   src="pic/champ.png"
   alt="Champions"
   title="Champions"
-  style="display: inline-block; margin: 0 auto; max-width: 80px">
+  style="display: inline-block; margin: 0 auto; width: 80px">
 
 The best combination for my data was Support Vector Machine with TF-IDF and RandomOverSampler. As shown on the classification report below, the weighted F1
 score achieved was 0.85, which is a significant improvement by random over-sampling as the original F1 score with TF-IDF without over-sampling was 0.64.
