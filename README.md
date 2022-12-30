@@ -45,22 +45,22 @@ The performance was evaluated based on the weighted F1 scores on the validation 
 
 Support Vector Machine worked the best followed by Logistic Regression and Random Forest.  For all three models, RandomOverSampler resulted in higher F1 scores than SMOTE or combination of SMOTE and RandomUnderSampler to deal with my imbalance data.  TF-IDF generally worked better than Bag of Words as Bag of Words worked well only when randomly over-sampled.  
 
-![Results](/home/hinoki/Financial-Sentiment-Analysis/result.png "Results")
+![Results](pic/result.png "Results")
 
 I have compared the performance with and without punctuation, but overall, removing
 punctuation did not make much difference on the classification accuracy. But for my best
 combination of the model and the techniques, data without removing punctuation worked slightly better. This is consistent with the result obtained by Sun (2018) as he concluded in his analysis that the preprocessing methods such as removing punctuation and lemmatizing do not have apparent influence on the classification accuracy. Rather, his result indicated that the raw texts work a little bit better than processed dataset, which is likely that punctuation can keep certain sentiment.
 
-![Results2](/home/hinoki/Financial-Sentiment-Analysis/compare.png "Results2")
+![Results2](pic/compare.png "Results2")
 
-![Champion](/home/hinoki/Financial-Sentiment-Analysis/champ.png "Champion")
+![Champion](pic/champ.png "Champion")
 
 The best combination for my data was Support Vector Machine with TF-IDF and RandomOverSampler. As shown on the classification report below, the weighted F1
 score achieved was 0.85, which is a significant improvement by random over-sampling as the original F1 score with TF-IDF without over-sampling was 0.64.
 
 ![Classification Report](pic/report.png "Classification Report")
 
-![Confusion Matrix](/home/hinoki/Financial-Sentiment-Analysis/cm.png "Confusion Matrix")
+![Confusion Matrix](pic/cm.png "Confusion Matrix")
 
 ## References:
 
