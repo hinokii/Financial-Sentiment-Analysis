@@ -7,7 +7,7 @@ This study aims to perform sentiment analysis on the financial textual data avai
 
 
 <img
-  src="pic/index.jpg"
+  src="pic/index.png"
   alt="Alt text"
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
