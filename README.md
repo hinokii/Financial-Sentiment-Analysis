@@ -53,7 +53,12 @@ The performance was evaluated based on the weighted F1 scores on the validation 
 
 Support Vector Machine worked the best followed by Logistic Regression and Random Forest.  For all three models, RandomOverSampler resulted in higher F1 scores than SMOTE or combination of SMOTE and RandomUnderSampler to deal with my imbalance data.  TF-IDF generally worked better than Bag of Words as Bag of Words worked well only when randomly over-sampled.  
 
-![Results](pic/result.png "Results")
+
+<img
+  src="pic/result.png"
+  alt="Results"
+  title="Results"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 I have compared the performance with and without punctuation, but overall, removing
 punctuation did not make much difference on the classification accuracy. But for my best
